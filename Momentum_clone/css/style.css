@@ -4,12 +4,13 @@
 
 body {
   min-width: 400px;
+  background-image: url(/image/wallpaper.jpg);
+  background-size: cover;
 }
 
 .top {
   height: 20vh;
   min-height: 50px;
-  background-color: tomato;
 }
 
 .mid {
@@ -19,13 +20,11 @@ body {
   align-items: center;
   height: 60vh;
   min-height: 200px;
-  background-color: black;
 }
 
 .bottom {
   height: 20vh;
   min-height: 50px;
-  background-color: powderblue;
 }
 
 #clock {
