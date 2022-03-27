@@ -1,0 +1,62 @@
+.hidden {
+  display: none;
+}
+
+body {
+  min-width: 400px;
+}
+
+.top {
+  height: 20vh;
+  min-height: 50px;
+  background-color: tomato;
+}
+
+.mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  min-height: 200px;
+  background-color: black;
+}
+
+.bottom {
+  height: 20vh;
+  min-height: 50px;
+  background-color: powderblue;
+}
+
+#clock {
+  font-size: 100px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+div.login {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.login span {
+  margin-bottom: 10px;
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.login #login-form input {
+  font-size: 30px;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+#greeting {
+  color: #ffffff;
+  font-size: 30px;
+}
