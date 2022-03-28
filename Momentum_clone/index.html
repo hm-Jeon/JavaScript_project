@@ -9,7 +9,16 @@
     <title>Momentum</title>
   </head>
   <body>
-    <section class="top"></section>
+    <section class="top">
+      <button id="todo-open" class="hidden">Todo</button>
+      <div id="todo">
+        <button id="todo-close">X</button>
+        <form id="todo-form">
+          <input type="text" placeholder="New Todo" required />
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+    </section>
     <section class="mid">
       <h2 id="clock" class="hidden"></h2>
       <div class="login hidden">
@@ -21,8 +30,16 @@
       </div>
       <h1 id="greeting" class="hidden"></h1>
     </section>
-    <section class="bottom"></section>
+    <section class="bottom">
+      <div id="quote">
+        <span class="hidden"></span>
+        <span class="hidden"></span>
+      </div>
+    </section>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
