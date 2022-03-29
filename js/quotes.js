@@ -2,28 +2,24 @@ import * as root from "./root.js";
 
 const quotes = [
   {
-    quote: "The way to het started is to quit talking and begin doing.",
-    author: "Walt Disney",
+    quote: "I dream of painting and then I paint my dream.",
+    author: "Vincent Van Gogh",
   },
   {
-    quote:
-      "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    author: "Nelson Mandela",
+    quote: "The price of greatness is responsibility.",
+    author: "Sir Winston Churchill",
   },
   {
-    quote:
-      "Your time is limited, so don't waste it living someone else's life.",
-    author: "Steve Jobs",
+    quote: "The only thing we have to fear is fear itself.",
+    author: "Franklin Delano Roosevelt",
   },
   {
-    quote:
-      "If life were predictable it would cease to be life, and be without flavor.",
-    author: "Eleanor Roosevelt",
+    quote: "Where there is love there is life.",
+    author: "Mohandas K. Gandhi",
   },
   {
-    quote:
-      "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
-    author: "Mother Teresa",
+    quote: "The truth is rarely pure and never simple.",
+    author: "Oscar Wilde",
   },
   {
     quote: "Whoever is happy will make others happy too.",
@@ -34,18 +30,16 @@ const quotes = [
     author: "Bob Marley",
   },
   {
-    quote:
-      "Keep smiling, because life is a beautiful thing and there's so much to smile about.",
-    author: "Marilyn Monroe",
+    quote: "Knowledge makes a man unfit to be a slave.",
+    author: "Frederick Douglass",
   },
   {
     quote: "Life is made of ever so many partings welded together.",
     author: "Charles Dickens",
   },
   {
-    quote:
-      "Many of life's failures are people who did not realize how close they were to success when they gave up.",
-    author: "Thomas A. Edison",
+    quote: "In the end, everything is a gag.",
+    author: "Charlie Chaplin",
   },
 ];
 
