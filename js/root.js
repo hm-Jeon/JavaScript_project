@@ -15,13 +15,12 @@ export const clock = document.querySelector("#clock");
 // Todo
 export const TRUE_KEY = "true";
 export const FALSE_KEY = "false";
-export const ANIMATE_CLASSNAME = "animate";
 export const ANIMATE_REVERSE_CLASSNAME = "animate-reverse";
 export const TODOS_KEY = "todos";
 export const DONE_KEY = "done";
+export const ACTIVE_CLASSNAME = "active";
 
 export const todoOpen = document.querySelector("#todo-open");
-export const todoClose = document.querySelector("#todo-close");
 export const todoDiv = document.querySelector("#todo");
 export const todoForm = document.querySelector("#todo-form");
 export const todoInput = todoForm.querySelector("input");

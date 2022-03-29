@@ -3,15 +3,8 @@ import * as root from "./root.js";
 let todos = [];
 
 root.todoOpen.addEventListener("click", function () {
-  root.todoDiv.classList.add(root.ANIMATE_CLASSNAME);
-  root.todoDiv.classList.remove(root.ANIMATE_REVERSE_CLASSNAME);
-  root.todoOpen.classList.add(root.HIDDEN_CLASSNAME);
-});
-
-root.todoClose.addEventListener("click", function () {
-  root.todoDiv.classList.remove(root.ANIMATE_CLASSNAME);
-  root.todoDiv.classList.add(root.ANIMATE_REVERSE_CLASSNAME);
-  root.todoOpen.classList.remove(root.HIDDEN_CLASSNAME);
+  root.todoDiv.classList.toggle(root.ANIMATE_REVERSE_CLASSNAME);
+  root.todoOpen.classList.toggle(root.ACTIVE_CLASSNAME);
 });
 
 const savedTodos = localStorage.getItem(root.TODOS_KEY);

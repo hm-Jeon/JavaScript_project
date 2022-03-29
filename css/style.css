@@ -19,6 +19,7 @@ body {
 }
 
 .top {
+  position: relative;
   height: 20%;
   min-height: 50px;
 }
