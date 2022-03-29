@@ -4,142 +4,123 @@
   left: 10px;
   border: none;
   background-color: transparent;
-  color: #ffffff;
-  opacity: 0.6;
-  font-size: 1rem;
+  color: var(--color-white);
+  opacity: var(--opacity-normal);
+  font-size: var(--font-size-large);
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
+  transition: var(--transition-all-ease);
 }
 
-#todo-open:hover {
-  opacity: 0.9;
-}
-
+#todo-open:hover,
 #todo-open.active {
-  opacity: 0.9;
+  opacity: var(--opacity-dark);
 }
 
 #todo i {
   position: absolute;
   top: -15px;
   left: 15px;
-  font-size: 30px;
+  color: var(--color-white);
+  font-size: var(--font-size-xxLarge);
 }
 
 #todo {
   position: absolute;
   top: 50px;
   left: 10px;
-  padding: 10px 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
+  padding: var(--padding-large) var(--padding-large);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-normal);
   box-sizing: border-box;
-  transform: translateY(-30px);
-  opacity: 0;
-  z-index: -1;
-  animation: todoOpenAnimation 0.5s ease-in-out forwards;
+  transform: var(--transform-todo-translateY);
+  opacity: var(--opacity-none);
+  z-index: var(--z-index-minus);
+  animation: var(--animation-todo);
 }
 
 #todo.animate-reverse {
-  animation: todoCloseAnimation 0.5s ease-in-out forwards;
-}
-
-@keyframes todoOpenAnimation {
-  from {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-    z-index: 1;
-  }
-}
-
-@keyframes todoCloseAnimation {
-  from {
-    transform: none;
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  to {
-    transform: translateY(-30px);
-    opacity: 0;
-    z-index: -1;
-  }
+  animation: var(--animation-todo-reverse);
 }
 
 #todo #todo-form {
-  padding: 0 5px;
+  padding: 0 var(--padding-normal);
 }
 
 #todo #todo-form input {
   width: 300px;
-  padding: 0 5px;
+  padding: 0 var(--padding-normal);
   border: none;
-  font-size: 1rem;
-  line-height: 2rem;
-  transition: border-color 0.3s ease-in-out;
+  font-size: var(--font-size-normal);
+  line-height: var(--font-size-xxLarge);
+  transition: var(--transition-all-ease);
 }
 
 #todo #todo-form input::placeholder {
-  opacity: 0.3;
-  transition: opacity 0.3s ease-in-out;
+  opacity: var(--opacity-light);
+  transition: var(--transition-all-ease);
 }
 
 #todo #todo-form input:hover::placeholder,
 #todo #todo-form input:focus::placeholder {
-  opacity: 0.9;
+  opacity: var(--opacity-dark);
+}
+
+#todo-list-wrapper {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+#todo-list-wrapper::-webkit-scrollbar {
+  width: 5px;
+  margin: var(--margin-normal) 0;
+}
+
+#todo-list-wrapper::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius-large);
+  background-color: var(--bgColor-todo-list-scrollbar-thumb);
 }
 
 #todo-list {
-  max-height: 500px;
-  overflow-y: scroll;
-}
-
-#todo-list::-webkit-scrollbar {
-  width: 5px;
-  margin: 5px 0;
-}
-
-#todo-list::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 0px;
+  max-height: 0px;
+  overflow-y: hidden;
+  transition: var(--animation-todo-list);
 }
 
 #todo-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 0;
-  color: #000000;
+  padding: var(--padding-normal) var(--padding-large);
+  color: var(--color-black);
 }
 
-#todo-list li:last-child {
-  padding-bottom: 10px;
+#todo-list li input[type="checkbox"] {
+  cursor: pointer;
 }
 
 #todo-list li span {
-  padding-left: 5px;
+  padding-left: var(--padding-normal);
 }
 
 #todo-list li span.done {
-  opacity: 0.3;
+  opacity: var(--opacity-light);
   text-decoration: line-through;
 }
 
 #todo-list li button {
+  visibility: hidden;
   border: none;
   background-color: transparent;
-  opacity: 0.4;
+  opacity: var(--opacity-light);
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
+  transition: var(--transition-opacity-ease);
 }
 
 #todo-list li button:hover {
-  opacity: 0.8;
+  opacity: var(--opacity-dark);
+}
+
+#todo-list li:hover button {
+  visibility: visible;
 }

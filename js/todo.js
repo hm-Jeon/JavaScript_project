@@ -14,6 +14,11 @@ if (savedTodos !== null) {
   parsedTodos.forEach(paintTodo);
 }
 
+function handleTodoListHeight() {
+  root.todoList.style.minHeight = `calc(28.8px * ${todos.length})`;
+  root.todoList.style.minHeight = `calc(28.8px * ${todos.length})`;
+}
+
 function saveTodos() {
   localStorage.setItem(root.TODOS_KEY, JSON.stringify(todos));
 }
@@ -23,6 +28,7 @@ function deleteTodo() {
   todos = todos.filter((todo) => todo.id !== Number(li.id));
   li.remove();
   saveTodos();
+  handleTodoListHeight();
 }
 
 function paintTodo(newTodo) {
@@ -66,6 +72,7 @@ function paintTodo(newTodo) {
   li.appendChild(div);
   li.appendChild(button);
   root.todoList.appendChild(li);
+  handleTodoListHeight();
 }
 
 function handleTodoSubmit(event) {

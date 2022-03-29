@@ -3,19 +3,19 @@ div.login {
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  font-size: 3.375rem;
+  font-size: var(--font-size-greeting);
 }
 
 .login span {
-  padding-bottom: 15px;
+  padding-bottom: var(--padding-xLarge);
 }
 
 .login #login-form input {
-  width: 550px;
+  width: 600px;
   border: none;
-  border-bottom: 3px solid #ffffff;
-  color: #ffffff;
+  border-bottom: var(--border-3px-solid-white);
+  color: var(--color-white);
   background-color: transparent;
-  font-size: 100%;
+  font-size: var(--font-size-greeting);
   text-align: center;
 }

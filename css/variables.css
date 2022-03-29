@@ -1,0 +1,77 @@
+:root {
+  --font-size-small: 0.925rem;
+  --font-size-normal: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-xxLarge: 2rem;
+  --font-size-greeting: 3.375rem;
+  --font-size-clock: 1050%;
+
+  --letter-spacing-clock: -0.3rem;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --bgColor-todo-list-scrollbar-thumb: rgba(0, 0, 0, 0.3);
+
+  --padding-normal: 5px;
+  --padding-large: 10px;
+  --padding-xLarge: 15px;
+
+  --margin-normal: 5px;
+  --margin-large: 10px;
+
+  --border-3px-solid-white: 3px solid #ffffff;
+
+  --border-radius-normal: 5px;
+  --border-radius-large: 10px;
+
+  --opacity-none: 0;
+  --opacity-light: 0.3;
+  --opacity-normal: 0.5;
+  --opacity-dark: 0.8;
+  --opacity-default: 1;
+
+  --z-index-minus: -1;
+  --z-index-plus: 1;
+
+  --transform-todo-translateY: translateY(-30px);
+  --transform-quote-translateY: translateY(10px);
+  --transform-author-translateY: translateY(-10px);
+
+  --transition-all-ease: all 0.3s ease;
+  --transition-opacity-ease: opacity 0.3s ease;
+
+  --animation-todo: todoOpenAnimation 0.5s ease-in-out forwards;
+  --animation-todo-reverse: todoCloseAnimation 0.5s ease-in-out forwards;
+  --animation-todo-list: max-height 0.2s ease-in-out,
+    min-height 0.2s ease-in-out;
+}
+
+@keyframes todoOpenAnimation {
+  from {
+    opacity: var(--opacity-none);
+  }
+  70% {
+    opacity: var(--opacity-none);
+  }
+  to {
+    transform: none;
+    opacity: var(--opacity-default);
+    z-index: var(--z-index-plus);
+  }
+}
+
+@keyframes todoCloseAnimation {
+  from {
+    transform: none;
+    opacity: var(--opacity-default);
+  }
+  30% {
+    opacity: var(--opacity-none);
+  }
+  to {
+    transform: var(--transform-todo-translateY);
+    opacity: var(--opacity-none);
+    z-index: var(--z-index-minus);
+  }
+}
