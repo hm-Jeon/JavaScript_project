@@ -1,0 +1,21 @@
+div.login {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  font-size: 3.375rem;
+}
+
+.login span {
+  padding-bottom: 15px;
+}
+
+.login #login-form input {
+  width: 550px;
+  border: none;
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 100%;
+  text-align: center;
+}

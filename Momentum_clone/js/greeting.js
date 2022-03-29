@@ -1,22 +1,11 @@
-const loginDiv = document.querySelector(".login");
-const loginForm = document.querySelector(".login #login-form");
-const loginSpan = document.querySelector(".login span");
-const loginInput = document.querySelector(".login #login-form input");
-const greeting = document.querySelector("#greeting");
-const clockH2 = document.querySelector("#clock");
-const quoteSpan = document.querySelector("#quote span:first-child");
-const authorSpan = document.querySelector("#quote span:last-child");
-const todoOpenBtn = document.querySelector("#todo-open");
-
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+import * as root from "./root.js";
 
 function greetingMent() {
   const hour = new Date().getHours();
   let ment;
-  if (hour > 5 && hour <= 11) {
+  if (hour > 5 && hour <= 10) {
     ment = "Good mourning,";
-  } else if (hour > 11 && hour <= 17) {
+  } else if (hour > 10 && hour <= 17) {
     ment = "Good afternoon,";
   } else if (hour > 17 && hour <= 21) {
     ment = "Good evening,";
@@ -27,31 +16,31 @@ function greetingMent() {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `${greetingMent()} ${username}.`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
-  clockH2.classList.remove(HIDDEN_CLASSNAME);
-  quoteSpan.classList.remove(HIDDEN_CLASSNAME);
-  authorSpan.classList.remove(HIDDEN_CLASSNAME);
-  todoOpenBtn.classList.remove(HIDDEN_CLASSNAME);
+  root.greeting.innerText = `${greetingMent()} ${username}.`;
+  root.greeting.classList.remove(root.HIDDEN_CLASSNAME);
+  root.clock.classList.remove(root.HIDDEN_CLASSNAME);
+  root.quote.classList.remove(root.HIDDEN_CLASSNAME);
+  root.author.classList.remove(root.HIDDEN_CLASSNAME);
+  root.todoOpen.classList.remove(root.HIDDEN_CLASSNAME);
 }
 
 function loginSubmit(event) {
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME);
-  loginSpan.classList.add(HIDDEN_CLASSNAME);
-  const inputUsername = loginInput.value;
-  localStorage.setItem(USERNAME_KEY, inputUsername);
+  root.loginForm.classList.add(root.HIDDEN_CLASSNAME);
+  root.loginSpan.classList.add(root.HIDDEN_CLASSNAME);
+  const inputUsername = root.loginInput.value;
+  localStorage.setItem(root.USERNAME_KEY, inputUsername);
   paintGreetings(inputUsername);
 }
 
-const savedUsername = localStorage.getItem("username");
+const savedUsername = localStorage.getItem(root.USERNAME_KEY);
 
 if (savedUsername === null) {
-  loginDiv.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginSpan.classList.remove(HIDDEN_CLASSNAME);
-  loginInput.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", loginSubmit);
+  root.loginDiv.classList.remove(root.HIDDEN_CLASSNAME);
+  root.loginForm.classList.remove(root.HIDDEN_CLASSNAME);
+  root.loginSpan.classList.remove(root.HIDDEN_CLASSNAME);
+  root.loginInput.classList.remove(root.HIDDEN_CLASSNAME);
+  root.loginForm.addEventListener("submit", loginSubmit);
 } else {
   paintGreetings(savedUsername);
 }

@@ -1,3 +1,5 @@
+import * as root from "./root.js";
+
 const quotes = [
   {
     quote: "The way to het started is to quit talking and begin doing.",
@@ -47,13 +49,10 @@ const quotes = [
   },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
-
 function randomQuote() {
   const randomInt = Math.floor(Math.random() * quotes.length);
-  quote.innerText = `"${quotes[randomInt].quote}"`;
-  author.innerText = quotes[randomInt].author;
+  root.quote.innerText = `"${quotes[randomInt].quote}"`;
+  root.author.innerText = quotes[randomInt].author;
 }
 
 randomQuote();

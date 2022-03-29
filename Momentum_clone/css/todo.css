@@ -1,0 +1,128 @@
+#todo-open {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  opacity: 0.6;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#todo-open:hover {
+  opacity: 0.9;
+}
+
+#todo {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  padding: 30px 10px 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transform: translateX(-400px);
+}
+
+#todo.animate {
+  animation: todoOpenAnimation 0.3s ease-in-out forwards;
+}
+
+#todo.animate-reverse {
+  animation: todoCloseAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes todoOpenAnimation {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes todoCloseAnimation {
+  from {
+    transform: none;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+}
+
+#todo button {
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#todo button:hover {
+  opacity: 0.8;
+}
+
+#todo #todo-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#todo #todo-form {
+  padding: 0 5px;
+}
+
+#todo #todo-form input {
+  width: 300px;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+#todo #todo-form input::placeholder {
+  opacity: 0.3;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 0;
+  color: #000000;
+}
+
+#todo-list li:first-child {
+  padding-top: 20px;
+}
+
+#todo-list li:last-child {
+  padding-bottom: 10px;
+}
+
+#todo-list li span {
+  padding-left: 5px;
+}
+
+#todo-list li span.done {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+#todo-list li button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
