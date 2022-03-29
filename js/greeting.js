@@ -7,7 +7,7 @@ function greetingMent() {
     ment = "Good mourning,";
   } else if (hour > 10 && hour <= 17) {
     ment = "Good afternoon,";
-  } else if (hour > 17 && hour <= 20) {
+  } else if (hour > 17 && hour <= 22) {
     ment = "Good evening,";
   } else {
     ment = "Good night,";
@@ -16,7 +16,12 @@ function greetingMent() {
 }
 
 export function paintGreetings(username) {
-  root.greeting.innerText = `${greetingMent()} ${username}.`;
+  const greetingMentSpan = document.createElement("span");
+  greetingMentSpan.innerText = `${greetingMent()} `;
+  const usernameSpan = document.createElement("span");
+  usernameSpan.innerText = `${username}.`;
+  root.greeting.appendChild(greetingMentSpan);
+  root.greeting.appendChild(usernameSpan);
   root.greeting.classList.remove(root.HIDDEN_CLASSNAME);
   root.clock.classList.remove(root.HIDDEN_CLASSNAME);
   root.quote.classList.remove(root.HIDDEN_CLASSNAME);

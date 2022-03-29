@@ -10,8 +10,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  min-height: 600px;
+  min-height: 500px;
   min-width: 800px;
   background-size: cover;
   color: #ffffff;
@@ -21,17 +23,21 @@ body {
 
 .top {
   position: relative;
-  height: 20%;
-  min-height: 100px;
+  flex: 0 0 auto;
+  height: 60px;
 }
 
-.mid {
+.center {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60%;
-  min-height: 300px;
+}
+
+.center-above,
+.center-below {
+  flex: 1 1 50%;
 }
 
 .bottom {
@@ -39,7 +45,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  height: 20%;
-  min-height: 100px;
+  flex: 0 0 auto;
+  height: 60px;
   box-sizing: border-box;
 }
