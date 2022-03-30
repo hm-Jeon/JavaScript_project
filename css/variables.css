@@ -1,8 +1,13 @@
 :root {
+  --width-login: 605px;
+
   --font-size-small: 0.925rem;
   --font-size-normal: 1rem;
   --font-size-large: 1.125rem;
+  --font-size-xLarge: 1.3rem;
   --font-size-xxLarge: 2rem;
+  --font-size-focus: 2.1875rem;
+  --font-size-focus-input: 2.25rem;
   --font-size-greeting: 3.375rem;
   --font-size-clock: 1050%;
 
@@ -16,14 +21,18 @@
   --padding-normal: 5px;
   --padding-large: 10px;
   --padding-xLarge: 15px;
+  --padding-focus-input: 4px 2px 1px;
 
   --margin-normal: 5px;
   --margin-large: 10px;
 
   --border-3px-solid-white: 3px solid #ffffff;
+  --border-2px-solid-white: 2px solid #ffffff;
 
   --border-radius-normal: 5px;
   --border-radius-large: 10px;
+
+  --line-height: 1.2;
 
   --opacity-none: 0;
   --opacity-light: 0.3;
@@ -33,6 +42,8 @@
 
   --z-index-minus: -1;
   --z-index-plus: 1;
+
+  --zoom-focus-checkbox: 1.7;
 
   --transform-todo-translateY: translateY(-30px);
   --transform-quote-translateY: translateY(10px);

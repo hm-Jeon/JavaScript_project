@@ -4,6 +4,7 @@
 @import url(clock.css);
 @import url(todo.css);
 @import url(quote.css);
+@import url(focus.css);
 
 .hidden {
   display: none;
@@ -38,6 +39,14 @@ body {
 .center-above,
 .center-below {
   flex: 1 1 50%;
+}
+
+.center-below {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .bottom {

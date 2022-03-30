@@ -95,6 +95,11 @@
   color: var(--color-black);
 }
 
+#todo-list li div {
+  display: flex;
+  align-items: center;
+}
+
 #todo-list li input[type="checkbox"] {
   cursor: pointer;
 }

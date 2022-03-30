@@ -15,6 +15,18 @@ function greetingMent() {
   return ment;
 }
 
+const elementToPaint = [
+  root.greeting,
+  root.clock,
+  root.quote,
+  root.author,
+  root.todoOpen,
+  root.focusDiv,
+  root.focusH3,
+  root.focusForm,
+  root.focusInput,
+];
+
 export function paintGreetings(username) {
   const greetingMentSpan = document.createElement("span");
   greetingMentSpan.innerText = `${greetingMent()} `;
@@ -22,9 +34,7 @@ export function paintGreetings(username) {
   usernameSpan.innerText = `${username}.`;
   root.greeting.appendChild(greetingMentSpan);
   root.greeting.appendChild(usernameSpan);
-  root.greeting.classList.remove(root.HIDDEN_CLASSNAME);
-  root.clock.classList.remove(root.HIDDEN_CLASSNAME);
-  root.quote.classList.remove(root.HIDDEN_CLASSNAME);
-  root.author.classList.remove(root.HIDDEN_CLASSNAME);
-  root.todoOpen.classList.remove(root.HIDDEN_CLASSNAME);
+  elementToPaint.forEach((element) =>
+    element.classList.remove(root.HIDDEN_CLASSNAME)
+  );
 }

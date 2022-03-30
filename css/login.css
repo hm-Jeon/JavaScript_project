@@ -1,21 +1,32 @@
-div.login {
+.login {
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  font-size: var(--font-size-greeting);
+  position: relative;
+  top: -8px;
+  width: var(--width-login);
 }
 
-.login span {
+.login > span {
   padding-bottom: var(--padding-xLarge);
+  font-size: var(--font-size-greeting);
+  line-height: var(--line-height);
+}
+
+.login #login-form {
+  width: 100%;
+  border-bottom: var(--border-3px-solid-white);
+  box-sizing: border-box;
 }
 
 .login #login-form input {
-  width: 600px;
+  width: 100%;
+  padding: 0;
   border: none;
-  border-bottom: var(--border-3px-solid-white);
   color: var(--color-white);
   background-color: transparent;
   font-size: var(--font-size-greeting);
   text-align: center;
+  box-sizing: border-box;
 }

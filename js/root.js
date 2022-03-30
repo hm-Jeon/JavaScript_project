@@ -1,6 +1,6 @@
 export const HIDDEN_CLASSNAME = "hidden";
 
-// Greeting
+// Login & Greeting
 export const USERNAME_KEY = "username";
 
 export const loginDiv = document.querySelector(".login");
@@ -25,6 +25,18 @@ export const todoDiv = document.querySelector("#todo");
 export const todoForm = document.querySelector("#todo-form");
 export const todoInput = todoForm.querySelector("input");
 export const todoList = document.querySelector("#todo-list");
+
+// Focus
+export const FOCUS_KEY = "focus";
+
+export const focusDiv = document.querySelector(".focus");
+export const focusForm = document.querySelector(".focus #focus-form");
+export const focusH3 = document.querySelector(".focus h3");
+export const focusInput = document.querySelector(".focus #focus-form input");
+export const focusListDiv = document.querySelector(".focus-list");
+export const focusList = document.querySelector(".focus-list ul");
+export const focusListH3 = document.querySelector(".focus-list > h3");
+export const focusListSpan = document.querySelector(".focus-list > span");
 
 // Quote
 export const quote = document.querySelector("#quote span:first-child");

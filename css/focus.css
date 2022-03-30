@@ -1,0 +1,91 @@
+.focus {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+  top: -20px;
+}
+
+.focus h3 {
+  font-size: var(--font-size-focus);
+  line-height: normal;
+}
+
+.focus #focus-form {
+  width: 100%;
+}
+
+.focus #focus-form input {
+  width: 100%;
+  border: none;
+  border-bottom: var(--border-2px-solid-white);
+  padding: var(--padding-focus-input);
+  color: var(--color-white);
+  background-color: transparent;
+  font-size: var(--font-size-focus-input);
+  text-align: center;
+}
+
+.focus-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.focus-list h3 {
+  padding-bottom: var(--padding-xLarge);
+  font-size: var(--font-size-xLarge);
+  font-weight: 700;
+}
+
+.focus-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-size: var(--font-size-focus);
+}
+
+.focus-list ul li div {
+  display: flex;
+  align-items: center;
+}
+
+.focus-list ul li input[type="checkbox"] {
+  visibility: hidden;
+  accent-color: var(--color-white);
+  cursor: pointer;
+  zoom: var(--zoom-focus-checkbox);
+}
+
+.focus-list ul li:hover input[type="checkbox"] {
+  visibility: visible;
+}
+
+.focus-list ul li span {
+  padding: 0 var(--padding-xLarge) 0 var(--padding-normal);
+}
+
+.focus-list ul li span.done {
+  opacity: var(--opacity-normal);
+  text-decoration: line-through;
+}
+
+.focus-list ul li button {
+  visibility: hidden;
+  border: none;
+  color: var(--color-white);
+  background-color: transparent;
+  font-size: var(--font-size-xLarge);
+  cursor: pointer;
+}
+
+.focus-list ul li:hover button {
+  visibility: visible;
+}
+
+.center-below > span {
+  position: absolute;
+  bottom: 30px;
+}

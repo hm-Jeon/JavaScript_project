@@ -23,16 +23,28 @@
     </div>
     <div class="center-above"></div>
     <div class="center">
-      <h2 id="clock" class="hidden"></h2>
       <div class="login hidden">
         <span class="hidden">Hello, what's your name?</span>
         <form id="login-form" class="hidden">
-          <input type="text" required maxlength="15" />
+          <input type="text" required maxlength="20" />
         </form>
       </div>
+      <h2 id="clock" class="hidden"></h2>
       <h1 id="greeting" class="hidden"></h1>
     </div>
-    <div class="center-below"></div>
+    <div class="center-below">
+      <div class="focus">
+        <h3 class="hidden">What is your main focus for today?</h3>
+        <form id="focus-form" class="hidden">
+          <input type="text" required maxlength="20" />
+        </form>
+      </div>
+      <div class="focus-list hidden">
+        <h3 class="hidden">TODAY</h3>
+        <ul class="hidden"></ul>
+        <span class="hidden">Good job!</span>
+      </div>
+    </div>
     <div class="bottom">
       <div id="quote">
         <span class="hidden"></span>
@@ -44,6 +56,7 @@
     <script src="js/clock.js" type="module"></script>
     <script src="js/quotes.js" type="module"></script>
     <script src="js/todo.js" type="module"></script>
+    <script src="js/focus.js" type="module"></script>
     <script src="js/background.js"></script>
     <script
       src="https://kit.fontawesome.com/ff3d2d78c3.js"
