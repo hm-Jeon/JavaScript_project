@@ -68,6 +68,7 @@
 #todo-list-wrapper {
   max-height: 380px;
   overflow-y: auto;
+  transition: var(--transition-todo-list-wrapper);
 }
 
 #todo-list-wrapper::-webkit-scrollbar {
@@ -84,7 +85,7 @@
   min-height: 0px;
   max-height: 0px;
   overflow-y: hidden;
-  transition: var(--animation-todo-list);
+  transition: var(--transition-todo-list);
 }
 
 #todo-list li {
@@ -128,4 +129,16 @@
 
 #todo-list li:hover button {
   visibility: visible;
+}
+
+@media screen and (max-height: 500px) {
+  #todo-list-wrapper {
+    max-height: 280px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  #todo-list-wrapper {
+    max-height: 150px;
+  }
 }

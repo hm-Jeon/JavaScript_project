@@ -1,3 +1,16 @@
 #greeting {
   font-size: var(--font-size-greeting);
+  transition: var(--transition-font-size-ease);
+}
+
+@media screen and (max-height: 700px) {
+  #greeting {
+    font-size: var(--font-size-greeting-small);
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #greeting {
+    font-size: var(--font-size-greeting-xSmall);
+  }
 }

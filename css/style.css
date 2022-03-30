@@ -27,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-height: 600px;
   min-width: 800px;
   background-size: cover;
   color: #ffffff;
@@ -70,4 +69,17 @@ body {
   flex: 0 0 auto;
   height: 60px;
   box-sizing: border-box;
+}
+
+@media screen and (max-height: 500px) {
+  .top,
+  .bottom {
+    height: 50px;
+  }
+}
+
+@media screen and (max-height: 200px) {
+  .center-above {
+    display: none;
+  }
 }

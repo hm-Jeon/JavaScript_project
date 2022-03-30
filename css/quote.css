@@ -35,3 +35,13 @@
   transform: none;
   opacity: var(--opacity-dark);
 }
+
+@media screen and (max-height: 500px) {
+  #quote span:first-child {
+    font-size: var(--font-size-normal);
+  }
+
+  #quote span:last-child {
+    font-size: var(--font-size-xSmall);
+  }
+}

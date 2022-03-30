@@ -1,4 +1,23 @@
 #clock {
   font-size: var(--font-size-clock);
   letter-spacing: var(--letter-spacing-clock);
+  transition: var(--transition-font-size-ease);
+}
+
+@media screen and (max-height: 700px) {
+  #clock {
+    font-size: var(--font-size-clock-small);
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #clock {
+    font-size: var(--font-size-clock-xSmall);
+  }
+}
+
+@media screen and (max-height: 400px) {
+  #clock {
+    display: none;
+  }
 }
