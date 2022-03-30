@@ -31,10 +31,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -10px;
 }
 
 .focus-list h3 {
-  padding-bottom: var(--padding-xLarge);
+  padding-bottom: var(--padding-large);
   font-size: var(--font-size-xLarge);
   font-weight: 700;
 }
@@ -85,7 +87,31 @@
   visibility: visible;
 }
 
-.center-below > span {
+.focus-list > span {
   position: absolute;
-  bottom: 30px;
+  bottom: -40px;
+  font-size: var(--font-size-large);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.focus-list > span.done {
+  animation: focusListSpanAnimation 2s ease-in-out;
+}
+
+@keyframes focusListSpanAnimation {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

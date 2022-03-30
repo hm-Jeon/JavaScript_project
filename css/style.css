@@ -6,15 +6,28 @@
 @import url(quote.css);
 @import url(focus.css);
 
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .hidden {
   display: none;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
   min-width: 800px;
   background-size: cover;
   color: #ffffff;
@@ -36,13 +49,13 @@ body {
   align-items: center;
 }
 
-.center-above,
-.center-below {
+.center-above {
   flex: 1 1 50%;
 }
 
 .center-below {
   display: flex;
+  flex: 1 1 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
