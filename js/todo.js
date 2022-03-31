@@ -4,6 +4,7 @@ let todos = [];
 
 root.todoOpen.addEventListener("click", function () {
   root.todoDiv.classList.toggle(root.ANIMATE_REVERSE_CLASSNAME);
+  root.todoDiv.classList.remove(root.HIDDEN_CLASSNAME);
   root.todoOpen.classList.toggle(root.ACTIVE_CLASSNAME);
 });
 
