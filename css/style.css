@@ -19,10 +19,6 @@
   display: none;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -75,11 +71,5 @@ body {
   .top,
   .bottom {
     height: 50px;
-  }
-}
-
-@media screen and (max-height: 200px) {
-  .center-above {
-    display: none;
   }
 }

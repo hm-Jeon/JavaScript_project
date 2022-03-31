@@ -12,6 +12,7 @@
   padding-bottom: var(--padding-xLarge);
   font-size: var(--font-size-greeting);
   line-height: var(--line-height);
+  transition: var(--transition-font-size-ease);
 }
 
 .login #login-form {
@@ -29,4 +30,23 @@
   font-size: var(--font-size-greeting);
   text-align: center;
   box-sizing: border-box;
+  transition: var(--transition-font-size-ease);
+}
+
+@media screen and (max-height: 700px) {
+  .login > span {
+    font-size: var(--font-size-greeting-small);
+  }
+  .login #login-form input {
+    font-size: var(--font-size-greeting-small);
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .login > span {
+    font-size: var(--font-size-greeting-xSmall);
+  }
+  .login #login-form input {
+    font-size: var(--font-size-greeting-xSmall);
+  }
 }

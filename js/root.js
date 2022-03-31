@@ -29,6 +29,7 @@ export const todoList = document.querySelector("#todo-list");
 
 // Focus
 export const FOCUS_KEY = "focus";
+export const MIN_HEIGHT_CLASS_NAME = "min-height";
 
 export const focusDiv = document.querySelector(".focus");
 export const focusForm = document.querySelector(".focus #focus-form");
