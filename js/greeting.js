@@ -1,5 +1,6 @@
 import * as root from "./root.js";
 import { focusElement, paintSavedFocus } from "./focus.js";
+import { onGeoOk, onGeoError } from "./weather.js";
 
 function greetingMent() {
   const hour = new Date().getHours();
@@ -40,4 +41,5 @@ export function paintGreetings(username) {
   root.focusDiv.classList.add(root.MIN_HEIGHT_CLASS_NAME);
   root.focusListDiv.classList.add(root.MIN_HEIGHT_CLASS_NAME);
   paintSavedFocus();
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 }

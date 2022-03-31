@@ -43,3 +43,9 @@ export const focusListSpan = document.querySelector(".focus-list > span");
 // Quote
 export const quote = document.querySelector("#quote span:first-child");
 export const author = document.querySelector("#quote span:last-child");
+
+// Weather
+export const weatherIcon = document.querySelector("#weather div .icon");
+export const weatherTemp = document.querySelector("#weather div .temp");
+export const weatherStatus = document.querySelector("#weather .status");
+export const weatherCity = document.querySelector("#weather .city");

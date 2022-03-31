@@ -1,6 +1,7 @@
 :root {
   --width-login: 605px;
   --min-height-focus: 130px;
+  --weather-icon-size: 35px;
 
   --font-size-xxSmall: 0.5rem;
   --font-size-xSmall: 0.8rem;
@@ -19,6 +20,8 @@
   --font-size-clock: 1050%;
   --font-size-clock-small: 900%;
   --font-size-clock-xSmall: 750%;
+  --font-size-weather-temp: 1.3rem;
+  --font-size-weather-city: 0.8rem;
 
   --letter-spacing-clock: -0.3rem;
 
