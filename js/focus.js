@@ -1,12 +1,26 @@
 import * as root from "./root.js";
 
 let focus;
+const focusElement = [
+  root.focusDiv,
+  root.focusForm,
+  root.focusH3,
+  root.focusInput,
+];
+const focusListElement = [
+  root.focusListDiv,
+  root.focusList,
+  root.focusListH3,
+  root.focusListSpan,
+];
 
-export const savedFocus = localStorage.getItem(root.FOCUS_KEY);
-if (savedFocus !== null) {
-  const parsedFocus = JSON.parse(savedFocus);
-  focus = parsedFocus;
-  paintFocus();
+const savedFocus = localStorage.getItem(root.FOCUS_KEY);
+export function paintSavedFocus() {
+  if (savedFocus !== null) {
+    const parsedFocus = JSON.parse(savedFocus);
+    focus = parsedFocus;
+    paintFocus();
+  }
 }
 
 function saveFocus() {
@@ -28,10 +42,10 @@ function deleteFocus() {
   const li = this.parentElement;
   li.remove();
   localStorage.removeItem(root.FOCUS_KEY);
-  root.focusElement.forEach((element) =>
+  focusElement.forEach((element) =>
     element.classList.remove(root.HIDDEN_CLASSNAME)
   );
-  root.focusListElement.forEach((element) =>
+  focusListElement.forEach((element) =>
     element.classList.add(root.HIDDEN_CLASSNAME)
   );
 }
@@ -79,10 +93,10 @@ function paintFocus() {
   li.appendChild(button);
   root.focusList.appendChild(li);
 
-  root.focusElement.forEach((element) =>
+  focusElement.forEach((element) =>
     element.classList.add(root.HIDDEN_CLASSNAME)
   );
-  root.focusListElement.forEach((element) =>
+  focusListElement.forEach((element) =>
     element.classList.remove(root.HIDDEN_CLASSNAME)
   );
 }

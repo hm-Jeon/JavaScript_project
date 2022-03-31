@@ -39,15 +39,6 @@ export const focusList = document.querySelector(".focus-list ul");
 export const focusListH3 = document.querySelector(".focus-list > h3");
 export const focusListSpan = document.querySelector(".focus-list > span");
 
-export const focusElement = [focusDiv, focusForm, focusH3, focusInput];
-
-export const focusListElement = [
-  focusListDiv,
-  focusList,
-  focusListH3,
-  focusListSpan,
-];
-
 // Quote
 export const quote = document.querySelector("#quote span:first-child");
 export const author = document.querySelector("#quote span:last-child");

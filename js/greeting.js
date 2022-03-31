@@ -1,5 +1,5 @@
 import * as root from "./root.js";
-import { savedFocus } from "./focus.js";
+import { paintSavedFocus } from "./focus.js";
 
 function greetingMent() {
   const hour = new Date().getHours();
@@ -34,12 +34,5 @@ export function paintGreetings(username) {
   elementToPaint.forEach((element) =>
     element.classList.remove(root.HIDDEN_CLASSNAME)
   );
-  if (savedFocus === null) {
-    root.focusElement.forEach((element) =>
-      element.classList.remove(root.HIDDEN_CLASSNAME)
-    );
-  }
-  root.focusListElement.forEach((element) =>
-    element.classList.remove(root.INVISIBLE_CLASSNAME)
-  );
+  paintSavedFocus();
 }
