@@ -1,7 +1,7 @@
 import * as root from "./root.js";
 
 let focus;
-const focusElement = [
+export const focusElement = [
   root.focusDiv,
   root.focusForm,
   root.focusH3,
