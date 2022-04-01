@@ -20,13 +20,25 @@
           <ul id="todo-list"></ul>
         </div>
       </div>
-      <div id="weather">
+      <div class="weather">
         <div>
           <div class="icon"></div>
-          <div class="temp"></div>
+          <span class="temp"></span>
         </div>
-        <span class="status"></span>
         <span class="city"></span>
+      </div>
+      <div class="dailyWeatherWrapper animate-reverse hidden">
+        <div class="dailyWeather">
+          <i class="fa-solid fa-caret-up"></i>
+          <div class="current">
+            <span class="city"></span>
+            <span class="status"></span>
+            <div class="iconAndTemp">
+              <span class="temp"></span>
+            </div>
+          </div>
+          <div class="daily"></div>
+        </div>
       </div>
     </div>
     <div class="center-above"></div>

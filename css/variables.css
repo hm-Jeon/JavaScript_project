@@ -2,6 +2,8 @@
   --width-login: 605px;
   --min-height-focus: 130px;
   --weather-icon-size: 35px;
+  --weather-icon-size-daily-current: 70px;
+  --width-weather-daily-weatherOfDay: 60px;
 
   --font-size-xxSmall: 0.5rem;
   --font-size-xSmall: 0.8rem;
@@ -21,7 +23,8 @@
   --font-size-clock-small: 900%;
   --font-size-clock-xSmall: 750%;
   --font-size-weather-temp: 1.3rem;
-  --font-size-weather-city: 0.8rem;
+  --font-size-weather-temp-daily-current: 3.8rem;
+  --font-size-weather-daily-weatherOfDay: 0.7rem;
 
   --letter-spacing-clock: -0.3rem;
 
@@ -29,18 +32,26 @@
   --color-black: #000000;
 
   --bgColor-todo-list-scrollbar-thumb: rgba(0, 0, 0, 0.3);
+  --bgColor-weather-daily-weatherOfDay: #f5f5f5;
 
   --padding-small: 3px;
   --padding-normal: 5px;
   --padding-large: 10px;
   --padding-xLarge: 15px;
+  --padding-xxLarge: 20px;
   --padding-focus-input: 4px 2px 1px;
+  --padding-weather-daily-weatherOfDay: 7px 10px;
 
   --margin-normal: 5px;
   --margin-large: 10px;
+  --margin-weather-daily-weatherOfDay: 0 2px;
+  --margin-bottom-weather-daily-weatherOfDay-dayOfWeek: -7px;
+  --margin-top-weather-daily-weatherOfDay-temp: -8px;
+  --margin-weather-daily-weatherOfDay-temp-min-max: 0 1px;
 
   --border-3px-solid-white: 3px solid #ffffff;
   --border-2px-solid-white: 2px solid #ffffff;
+  --border-daily-weather: 1px solid #e1e1e1;
 
   --border-radius-normal: 5px;
   --border-radius-large: 10px;

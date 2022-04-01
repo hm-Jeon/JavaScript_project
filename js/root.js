@@ -45,7 +45,32 @@ export const quote = document.querySelector("#quote span:first-child");
 export const author = document.querySelector("#quote span:last-child");
 
 // Weather
-export const weatherIcon = document.querySelector("#weather div .icon");
-export const weatherTemp = document.querySelector("#weather div .temp");
-export const weatherStatus = document.querySelector("#weather .status");
-export const weatherCity = document.querySelector("#weather .city");
+export const weather = document.querySelector(".weather");
+export const weatherIcon = document.querySelector(".weather div .icon");
+export const weatherTemp = document.querySelector(".weather div .temp");
+export const weatherCity = document.querySelector(".weather .city");
+
+export const dailyWeather = document.querySelector(".dailyWeatherWrapper");
+
+export const dailyWeatherCurrent = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .current"
+);
+export const dailyWeatherCurrentCity = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .current .city"
+);
+export const dailyWeatherCurrentStatus = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .current .status"
+);
+export const dailyWeatherCurrentIconAndTemp = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .current .iconAndTemp"
+);
+export const dailyWeatherCurrentIcon = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .current .iconAndTemp .icon"
+);
+export const dailyWeatherCurrentTemp = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .current .iconAndTemp .temp"
+);
+
+export const dailyWeatherDaily = document.querySelector(
+  ".dailyWeatherWrapper .dailyWeather .daily"
+);

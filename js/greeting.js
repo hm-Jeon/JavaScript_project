@@ -35,11 +35,15 @@ export function paintGreetings(username) {
   elementToPaint.forEach((element) =>
     element.classList.remove(root.HIDDEN_CLASSNAME)
   );
+
+  // Focus
   focusElement.forEach((element) =>
     element.classList.remove(root.HIDDEN_CLASSNAME)
   );
   root.focusDiv.classList.add(root.MIN_HEIGHT_CLASS_NAME);
   root.focusListDiv.classList.add(root.MIN_HEIGHT_CLASS_NAME);
   paintSavedFocus();
+
+  // Weather
   navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 }
