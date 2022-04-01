@@ -8,6 +8,26 @@ function weatherOpen() {
   root.dailyWeather.classList.toggle(root.ANIMATE_REVERSE_CLASSNAME);
 }
 
+function weatherClose(event) {
+  const weatherElements = [
+    ...root.dailyWeather.querySelectorAll("*"),
+    ...root.weather.querySelectorAll("*"),
+  ];
+  console.log(weatherElements);
+  let find;
+  if (!root.dailyWeather.classList.contains(root.ANIMATE_REVERSE_CLASSNAME)) {
+    weatherElements.forEach((element) => {
+      if (event.target === element) {
+        find = true;
+      }
+    });
+  }
+  if (find !== true) {
+    root.dailyWeather.classList.add(root.ANIMATE_REVERSE_CLASSNAME);
+  }
+}
+
+document.body.addEventListener("click", weatherClose);
 root.weather.addEventListener("click", weatherOpen);
 
 export function onGeoOk(position) {
@@ -37,9 +57,6 @@ function currentWeather(lat, lon) {
       root.weatherCity.innerText = data.name;
 
       // dailyWeather - Current
-      console.log(data);
-
-      console.log(root.dailyWeatherCurrentCity);
       root.dailyWeatherCurrentCity.innerText = data.name;
       root.dailyWeatherCurrentStatus.innerText = data.weather[0].main;
       const dailyIcon = root.weatherIcon.cloneNode(true);
@@ -98,7 +115,6 @@ function dailyWeather(lat, lon) {
           div.appendChild(tempDiv);
 
           root.dailyWeatherDaily.appendChild(div);
-          console.log(div);
         }
       });
     });
