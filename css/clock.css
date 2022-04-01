@@ -10,7 +10,7 @@
   }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 500px), screen and (max-width: 600px) {
   #clock {
     font-size: var(--font-size-clock-xSmall);
   }

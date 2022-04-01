@@ -46,7 +46,7 @@
 .dailyWeatherWrapper .dailyWeather {
   display: flex;
   flex-direction: column;
-  padding: var(--padding-xxLarge);
+  padding: var(--padding-xLarge) var(--padding-xxLarge);
   background-color: var(--color-white);
   border-radius: var(--border-radius-normal);
   color: var(--color-black);
@@ -69,11 +69,13 @@
 .dailyWeather .current .city {
   font-size: var(--font-size-xLarge);
   padding-bottom: var(--padding-normal);
+  transition: var(--transition-all-ease);
 }
 
 .dailyWeather .current .status {
   font-size: var(--font-size-normal);
-  opacity: var(--opacity-dark);
+  opacity: var(--opacity-normal);
+  transition: var(--transition-font-size-ease);
 }
 
 .dailyWeather .current .iconAndTemp {
@@ -86,10 +88,12 @@
   height: var(--weather-icon-size-daily-current);
   width: var(--weather-icon-size-daily-current);
   padding-right: var(--padding-normal);
+  transition: var(--transition-all-ease);
 }
 
 .dailyWeather .current .iconAndTemp .temp {
   font-size: var(--font-size-weather-temp-daily-current);
+  transition: var(--transition-font-size-ease);
 }
 
 .dailyWeather .daily {
@@ -109,6 +113,7 @@
   margin: var(--margin-weather-daily-weatherOfDay);
   border-radius: var(--border-radius-normal);
   cursor: pointer;
+  transition: var(--transition-all-ease);
 }
 
 .dailyWeather .daily .weatherOfDay:hover {
@@ -143,4 +148,29 @@
 
 .dailyWeather .daily .weatherOfDay .weatherOfDayTemp .minTemp {
   opacity: var(--opacity-normal);
+}
+
+@media screen and (max-height: 500px), screen and (max-width: 600px) {
+  .dailyWeather .current .city {
+    font-size: var(--font-size-large);
+    padding-bottom: var(--padding-small);
+  }
+
+  .dailyWeather .current .status {
+    font-size: var(--font-size-small);
+  }
+
+  .dailyWeather .current .iconAndTemp .icon img {
+    height: var(--weather-icon-size-daily-current-small);
+    width: var(--weather-icon-size-daily-current-small);
+    padding-right: var(--padding-xSmall);
+  }
+
+  .dailyWeather .current .iconAndTemp .temp {
+    font-size: var(--font-size-weather-temp-daily-current-small);
+  }
+
+  .dailyWeather .daily .weatherOfDay {
+    width: var(--width-weather-daily-weatherOfDay-small);
+  }
 }

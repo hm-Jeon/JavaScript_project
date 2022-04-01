@@ -9,8 +9,14 @@
   }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 500px), screen and (max-width: 800px) {
   #greeting {
     font-size: var(--font-size-greeting-xSmall);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #greeting {
+    font-size: var(--font-size-greeting-xxSmall);
   }
 }

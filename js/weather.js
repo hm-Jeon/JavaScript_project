@@ -13,7 +13,6 @@ function weatherClose(event) {
     ...root.dailyWeather.querySelectorAll("*"),
     ...root.weather.querySelectorAll("*"),
   ];
-  console.log(weatherElements);
   let find;
   if (!root.dailyWeather.classList.contains(root.ANIMATE_REVERSE_CLASSNAME)) {
     weatherElements.forEach((element) => {

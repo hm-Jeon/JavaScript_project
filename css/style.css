@@ -20,15 +20,21 @@
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-width: 800px;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
     "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  overflow: hidden;
 }
 
 .top {

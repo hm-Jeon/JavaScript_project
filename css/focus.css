@@ -142,7 +142,7 @@
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 700px), screen and (max-width: 600px) {
   .focus,
   .focus-list {
     top: 20px;

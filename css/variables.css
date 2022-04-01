@@ -3,7 +3,9 @@
   --min-height-focus: 130px;
   --weather-icon-size: 35px;
   --weather-icon-size-daily-current: 70px;
+  --weather-icon-size-daily-current-small: 50px;
   --width-weather-daily-weatherOfDay: 60px;
+  --width-weather-daily-weatherOfDay-small: 40px;
 
   --font-size-xxSmall: 0.5rem;
   --font-size-xSmall: 0.8rem;
@@ -19,11 +21,14 @@
   --font-size-greeting: 3.375rem;
   --font-size-greeting-small: 3rem;
   --font-size-greeting-xSmall: 2.7rem;
+  --font-size-greeting-xxSmall: 2.2rem;
+  --font-size-greeting-xxxSmall: 1.8rem;
   --font-size-clock: 1050%;
   --font-size-clock-small: 900%;
   --font-size-clock-xSmall: 750%;
   --font-size-weather-temp: 1.3rem;
   --font-size-weather-temp-daily-current: 3.8rem;
+  --font-size-weather-temp-daily-current-small: 2.5rem;
   --font-size-weather-daily-weatherOfDay: 0.7rem;
 
   --letter-spacing-clock: -0.3rem;
@@ -42,6 +47,8 @@
   --padding-focus-input: 4px 2px 1px;
   --padding-weather-daily-weatherOfDay: 7px 10px;
 
+  --margin-xSmall: 1px;
+  --margin-small: 2px;
   --margin-normal: 5px;
   --margin-large: 10px;
   --margin-weather-daily-weatherOfDay: 0 2px;
@@ -77,8 +84,8 @@
   --transition-all-ease: all 0.3s ease;
   --transition-opacity-ease: opacity 0.3s ease;
   --transition-todo-list-wrapper: max-height 0.3s ease-in-out;
-  --transition-todo-list: max-height 0.2s ease-in-out,
-    min-height 0.2s ease-in-out;
+  --transition-todo-list: max-height 0.3s ease-in-out,
+    min-height 0.3s ease-in-out;
   --transition-font-size-ease: font-size 0.3s ease;
 
   --animation-todo: todoOpenAnimation 0.5s ease-in-out forwards;

@@ -26,6 +26,7 @@ export const todoDiv = document.querySelector("#todo");
 export const todoForm = document.querySelector("#todo-form");
 export const todoInput = todoForm.querySelector("input");
 export const todoList = document.querySelector("#todo-list");
+export const todoListWrapper = document.querySelector("#todo-list-wrapper");
 
 // Focus
 export const FOCUS_KEY = "focus";

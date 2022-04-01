@@ -28,7 +28,7 @@
   position: absolute;
   top: 50px;
   left: 10px;
-  padding: var(--padding-large) var(--padding-large);
+  padding: var(--padding-large);
   background-color: var(--color-white);
   border-radius: var(--border-radius-normal);
   box-sizing: border-box;
@@ -47,12 +47,14 @@
 }
 
 #todo #todo-form input {
-  width: 300px;
+  width: 100%;
+  min-width: 300px;
   padding: 0 var(--padding-normal);
   border: none;
   font-size: var(--font-size-normal);
   line-height: var(--font-size-xxLarge);
   transition: var(--transition-all-ease);
+  box-sizing: border-box;
 }
 
 #todo #todo-form input::placeholder {
@@ -91,22 +93,27 @@
 #todo-list li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--padding-normal) var(--padding-large);
   color: var(--color-black);
+  box-sizing: border-box;
 }
 
 #todo-list li div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
 }
 
 #todo-list li input[type="checkbox"] {
+  margin: var(--margin-xSmall) var(--margin-small);
   cursor: pointer;
 }
 
 #todo-list li span {
+  max-width: 300px;
   padding-left: var(--padding-normal);
+  word-wrap: break-word;
 }
 
 #todo-list li span.done {

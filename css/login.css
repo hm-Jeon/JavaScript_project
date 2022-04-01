@@ -5,7 +5,6 @@
   align-items: center;
   position: relative;
   top: -8px;
-  width: var(--width-login);
 }
 
 .login > span {
@@ -42,11 +41,20 @@
   }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 500px), screen and (max-width: 1000px) {
   .login > span {
     font-size: var(--font-size-greeting-xSmall);
   }
   .login #login-form input {
     font-size: var(--font-size-greeting-xSmall);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .login > span {
+    font-size: var(--font-size-greeting-xxSmall);
+  }
+  .login #login-form input {
+    font-size: var(--font-size-greeting-xxSmall);
   }
 }
