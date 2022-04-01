@@ -1,10 +1,11 @@
 import * as root from "./root.js";
 
 let todos = [];
+root.todoList.style.maxHeight = "calc(0px)";
 
 root.todoOpen.addEventListener("click", function () {
   root.todoDiv.classList.toggle(root.ANIMATE_REVERSE_CLASSNAME);
-  root.todoDiv.classList.remove(root.HIDDEN_CLASSNAME);
+  root.todoDiv.classList.remove(root.INVISIBLE_CLASSNAME);
   root.todoOpen.classList.toggle(root.ACTIVE_CLASSNAME);
 });
 
@@ -12,12 +13,23 @@ const savedTodos = localStorage.getItem(root.TODOS_KEY);
 if (savedTodos !== null) {
   const parsedTodos = JSON.parse(savedTodos);
   todos = parsedTodos;
-  parsedTodos.forEach(paintTodo);
+  todos.forEach((todo) => {
+    paintTodo(todo);
+  });
 }
 
-function handleTodoListHeight() {
-  root.todoList.style.minHeight = `calc(28.8px * ${todos.length})`;
-  root.todoList.style.minHeight = `calc(28.8px * ${todos.length})`;
+export function getTodoListHeight() {
+  const listHeight = root.todoList.style.maxHeight;
+  const splitHeight = listHeight.split("calc(")[1].split("px)")[0];
+  return splitHeight;
+}
+
+function handleTodoListHeight(element, listHeight, action) {
+  const liHeight = element.getBoundingClientRect().height.toFixed(1);
+  const op = action === "paint" ? "+" : "-";
+
+  root.todoList.style.minHeight = `calc(${listHeight}px ${op} ${liHeight}px)`;
+  root.todoList.style.maxHeight = `calc(${listHeight}px ${op} ${liHeight}px)`;
 }
 
 function saveTodos() {
@@ -27,9 +39,9 @@ function saveTodos() {
 function deleteTodo() {
   const li = this.parentElement;
   todos = todos.filter((todo) => todo.id !== Number(li.id));
+  handleTodoListHeight(li, getTodoListHeight(), "delete");
   li.remove();
   saveTodos();
-  handleTodoListHeight();
 }
 
 function paintTodo(newTodo) {
@@ -73,7 +85,7 @@ function paintTodo(newTodo) {
   li.appendChild(div);
   li.appendChild(button);
   root.todoList.appendChild(li);
-  handleTodoListHeight();
+  handleTodoListHeight(li, getTodoListHeight(), "paint");
 }
 
 function handleTodoSubmit(event) {
